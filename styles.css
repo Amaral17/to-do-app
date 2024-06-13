@@ -1,0 +1,90 @@
+*{
+    box-sizing:border-box;
+    margin: 0%;
+}
+:root{
+    --green1: #79f05b;
+    --green2: #138f02;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    background-color: white;
+}
+#main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#menu-bar{
+    font-size: 30px;
+    margin: 10px;
+    cursor: pointer;
+}
+h1{
+    margin-top: 30px;
+}
+#inputBox{
+    margin: 30px;
+    background-color:var(--green1);
+    height: 80px;
+    width: 75%;
+    max-width: 750px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#inputBox p{
+
+}
+#input-container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+#input-container input{
+    margin: 5px;
+    border-radius: 20px;
+    width: 70%;
+    height: 35px;
+}
+#create{
+    margin: 5px;
+    padding:5px;
+    height: 35px;
+    width: 35px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    cursor: pointer;
+    background-color: white;
+    color: var(--green2)
+}
+#create:hover{
+    transform: scale(1.075);
+    transition: 0.1s ease-in;
+}
+#tasks-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    width: 100%;
+}
+.task{
+    margin: 15px;
+    border: 1.5px solid var(--green2);
+    height: 70px;
+    width: 75%;
+    max-width: 750px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
