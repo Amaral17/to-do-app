@@ -84,7 +84,28 @@ h1{
     max-width: 750px;
     border-radius: 15px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
+    align-items:center;
+}
+.check-btn{
+    background-color: white;
+    padding:6.5px;
+    height: 25px;
+    width: 25px;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 1000;
+    display: flex;
     align-items: center;
+    justify-content: center;
+}
+.fa-trash{
+    background-color: red;
+    color: white;
+    padding:6.5px;
+    height: 25px;
+    width: 25px;
+    border-radius: 50px;
+    font-size: 13px;
+    cursor: pointer;
 }

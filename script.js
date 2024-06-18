@@ -13,13 +13,55 @@ function createTask(){
     else{
         let task = document.createElement("div");
         task.className = "task";
-        task.innerHTML = taskInput.value;
         tasksContainer.appendChild(task);
+
+        //check button
+        let checkButton = document.createElement("button");
+        checkButton.className = "check-btn";
+        checkButton.onclick = function() {
+            if (checkButton.innerHTML === "") {
+                checkButton.innerHTML = "✓";
+                taskText.style.textDecoration = "line-through";
+            } 
+            else {
+                checkButton.innerHTML = "";
+                taskText.style.textDecoration = "none";
+            }
+        };
+        task.appendChild(checkButton);
+
+        //h3 task text
+        let taskText = document.createElement("h3");
+        taskText.innerHTML = taskInput.value;
+        taskText.className = "task-text";
+        task.appendChild(taskText);
+
+        //edit button
+        // let editButton = document.createElement("button");
+        // editButton.innerHTML = "✎";
+        // editButton.className = "edit";
+        // editButton.onclick = function() {
+        //     let newTask = prompt("Edit your task:", taskText.innerHTML);
+        //     if (newTask) {
+        //         taskText.innerHTML = newTask;
+        //     }
+        // };
+        // task.appendChild(editButton);
+
+        //delete button
+        let deleteButton = document.createElement("i");
+        deleteButton.className = "fa-solid fa-trash";
+        deleteButton.onclick = function(){
+            tasksContainer.removeChild(task);
+        };
+        task.appendChild(deleteButton);
+
+
         taskInput.value = "";
     }
 }
 
-taskInput.addEventListener("keypress", function(event) {
+taskInput.addEventListener("keydown", function(event) {
     if (event.key === "Enter") {
         createTask();
     }
