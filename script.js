@@ -2,7 +2,7 @@ const welcomeMsg = document.getElementById("welcomeMsg");
 const menuBar = document.getElementById("menu-bar");
 const taskInput = document.getElementById("task-input");
 const tasksContainer = document.getElementById("tasks-container");
-let username = "Luiza";
+let username = "";
 
 welcomeMsg.textContent += username === "" ? "guest" + "!": username + "!";
 
